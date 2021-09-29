@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "3bcd8d5e-26ee-4fdd-b176-c625187d2e50",
+		"name": "Kardex Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "save user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : null,\n    \"lastName\" : \"rozo\",\n    \"email\" : \"t|tes.com\",\n    \"password\" : null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all prodcuts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "save product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n        \"name\": \"pantalon\",\n        \"description\": \"dos\",\n        \"price\": 1.0,\n        \"stock\": 3,\n        \"typeProduct\": 1,\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/product/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save shoppingcar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"UserDTO\":{\n\n    },\n    \"ProductDTO\":{\n\n    },\n    \"quantity\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/shoppingcar/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shoppingcar",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get products shopping car",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/shoppingcar/get_items?email=dev@t.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shoppingcar",
+						"get_items"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "dev@t.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
